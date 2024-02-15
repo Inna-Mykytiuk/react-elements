@@ -1,23 +1,40 @@
 import { useState } from "react";
-import CircleProgressBar from "../CircleProgressBar/CircleProgressBar";
+import ProgressBarContent from "../ProgressBarContent/ProgressBarContent";
+import ButtonsBlock from "../ButtonBlock/ButtonBlock";
 
 const ProgressBar = () => {
-  const [rating, setRating] = useState(1);
+  const [rating, setRating] = useState(0);
+  const [clicks, setClicks] = useState(Array(10).fill(0));
+  const [totalClicks, setTotalClicks] = useState(0);
+  const [userRating, setUserRating] = useState(0);
+
+  const handleButtonClick = (index) => {
+    const newClicks = [...clicks];
+    newClicks[index]++;
+    setClicks(newClicks);
+
+    const newTotalClicks = newClicks.reduce((acc, click) => acc + click, 0);
+    const newTotalRating = newClicks.reduce(
+      (acc, click, i) => acc + click * (i + 1),
+      0
+    );
+
+    setTotalClicks(newTotalClicks);
+    setRating(newTotalRating / newTotalClicks);
+
+    // Оновлення стану для рейтингу одного користувача
+    setUserRating(index + 1);
+  };
 
   return (
     <section className='progress-section'>
       <div className='container'>
-        <div>
-          <CircleProgressBar rating={rating} circleWidth='200' />
-          <input
-            type='range'
-            min='0'
-            max='10'
-            step='0.1' // Use a smaller step for decimal values
-            value={rating}
-            onChange={(e) => setRating(parseFloat(e.target.value).toFixed(1))}
-          />
-        </div>
+        <ProgressBarContent
+          rating={rating}
+          totalClicks={totalClicks}
+          userRating={userRating}
+        />
+        <ButtonsBlock handleButtonClick={handleButtonClick} />
       </div>
     </section>
   );

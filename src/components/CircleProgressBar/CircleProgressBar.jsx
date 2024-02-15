@@ -2,6 +2,10 @@ import PropTypes from "prop-types";
 import "./CircleProgressBar.css";
 
 const CircleProgressBar = ({ rating, circleWidth }) => {
+  const roundToDecimal = (value, decimals) => {
+    const multiplier = 10 ** decimals;
+    return Math.round(value * multiplier) / multiplier;
+  };
   const radius = 85;
 
   const dashArray = radius * Math.PI * 2;
@@ -42,7 +46,7 @@ const CircleProgressBar = ({ rating, circleWidth }) => {
           fill='#7f7b7b'
           className='circle-text'
         >
-          {rating}
+          {roundToDecimal(rating, 1)}
         </text>
       </svg>
     </div>
