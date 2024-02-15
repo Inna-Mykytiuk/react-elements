@@ -5,13 +5,21 @@
 
 .circle-progress {
   fill: none;
-  stroke: var(--color1);
+  /* stroke: var(--color1); */
   stroke-linecap: round;
   stroke-linejoin: round;
 }
 
 .circle-text {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: bold;
-  color: #ddd;
+  color: #ebf6f5;
+  fill: #ebf6f5;
+
+  text-align: center;
+  font-family: "Red Hat Display";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 120%;
 }

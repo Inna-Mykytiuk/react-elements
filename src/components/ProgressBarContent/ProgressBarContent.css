@@ -1,0 +1,27 @@
+.progress-text h2 {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: normal;
+}
+
+.votes {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.rating {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.rating span {
+  color: #f9b936;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: normal;
+}

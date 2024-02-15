@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import "./ProgressBarContent.css";
 import CircleProgressBar from "../CircleProgressBar/CircleProgressBar";
 
 const ProgressBarContent = ({ rating, totalClicks, userRating }) => {
@@ -9,11 +10,16 @@ const ProgressBarContent = ({ rating, totalClicks, userRating }) => {
 
   return (
     <div className='progress-bar'>
-      <CircleProgressBar rating={rating} circleWidth='200' />
-      <div>
-        <p>Clicks: {totalClicks}</p>
-        <p>Average rating: {roundToDecimal(rating, 1)}</p>
-        <p>Your Rating: {userRating}</p>
+      <CircleProgressBar rating={rating} circleWidth='100' />
+      <div className='progress-text'>
+        <h2>Players</h2>
+        <p className='votes'>{`${totalClicks} votes`}</p>
+        <p className='rating'>
+          Average rating: <span>{roundToDecimal(rating, 1)}</span>
+        </p>
+        <p className='rating'>
+          Your Rating: <span>{userRating}</span>
+        </p>
       </div>
     </div>
   );

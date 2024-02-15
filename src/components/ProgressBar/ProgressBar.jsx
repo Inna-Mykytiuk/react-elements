@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ProgressBarContent from "../ProgressBarContent/ProgressBarContent";
 import ButtonsBlock from "../ButtonBlock/ButtonBlock";
+import "./ProgressBar.css";
 
 const ProgressBar = () => {
   const [rating, setRating] = useState(0);

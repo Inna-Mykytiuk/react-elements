@@ -10,7 +10,7 @@
   --color3: #f38188;
   --gradient: conic-gradient(
     from -40.59deg at 52% 49.77%,
-    #dc4a19 0deg,
+    #f36536 0deg,
     #fcc539 43.78deg,
     #dc4a19 360deg
   );
@@ -26,7 +26,7 @@
 
 html,
 body {
-  font-family: "Anzeigen Grotesk T";
+  font-family: "Red Hat Display", sans-serif;
   font-style: normal;
 
   min-height: 100vh;
