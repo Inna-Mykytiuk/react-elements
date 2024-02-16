@@ -23,7 +23,6 @@ const ProgressBar = () => {
     setTotalClicks(newTotalClicks);
     setRating(newTotalRating / newTotalClicks);
 
-    // Оновлення стану для рейтингу одного користувача
     setUserRating(index + 1);
   };
 
