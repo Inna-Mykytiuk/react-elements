@@ -1,0 +1,40 @@
+.buttons-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress-btn {
+  background-color: #ccc;
+
+  color: #707070;
+  text-align: center;
+  font-family: "Red Hat Display";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 14.4px */
+  letter-spacing: 0.5px;
+  padding: 11px 6px;
+  border: none;
+  cursor: pointer;
+  border-left: 1px solid rgba(112, 112, 112, 0.15);
+}
+
+.first-btn {
+  padding-left: 25px;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+
+.last-btn {
+  padding-right: 20px;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+
+.active-btn {
+  background-color: red;
+  background: linear-gradient(#f36536, #fcc539);
+  color: white;
+}
