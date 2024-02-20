@@ -1,0 +1,32 @@
+.navbar {
+  width: 100%;
+  padding: 30px 0;
+  background: linear-gradient(90deg, #0dd0ba 0%, #2a86e5 100%);
+}
+
+.nav-list {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.nav-item p {
+  color: #fff;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px; /* 128.571% */
+  letter-spacing: 0.5px;
+}
+
+.phone-svg {
+  width: 20px;
+  height: 20px;
+  fill: #fff;
+}
