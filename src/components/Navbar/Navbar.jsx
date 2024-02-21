@@ -1,11 +1,19 @@
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import {
+  FaFilter,
+  FaInstagram,
+  FaApple,
+  FaYoutube,
+  FaWifi,
+} from "react-icons/fa";
 import { MdPhoneIphone } from "react-icons/md";
+import { SiGooglenews } from "react-icons/si";
 import { BsAndroid2 } from "react-icons/bs";
-import { FaFilter } from "react-icons/fa";
-import { FaApple } from "react-icons/fa";
+import { ImFacebook } from "react-icons/im";
+import { FaTwitter } from "react-icons/fa6";
 import "./Navbar.css";
 import ToggleBtn from "../ui/ToggleBtn/ToggleBtn";
-import PropTypes from "prop-types";
 const Navbar = ({ darkMode, toggleDarkMode }) => {
   return (
     <div className='navbar'>
@@ -29,8 +37,29 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
               <p>Menu item 4</p>
             </Link>
           </div>
-
-          <ToggleBtn handleChange={toggleDarkMode} isChecked={darkMode} />
+          <div className='list-wrapper'>
+            <ul className='social-list'>
+              <li className='social-item'>
+                <ImFacebook />
+              </li>
+              <li className='social-item'>
+                <FaTwitter />
+              </li>
+              <li className='social-item'>
+                <FaInstagram />
+              </li>
+              <li className='social-item'>
+                <FaYoutube />
+              </li>
+              <li className='social-item'>
+                <SiGooglenews />
+              </li>
+              <li className='social-item'>
+                <FaWifi />
+              </li>
+            </ul>
+            <ToggleBtn handleChange={toggleDarkMode} isChecked={darkMode} />
+          </div>
         </nav>
       </div>
     </div>
