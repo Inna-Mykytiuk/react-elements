@@ -1,0 +1,48 @@
+.toggle-container {
+  position: relative;
+  display: flex;
+}
+
+.toggle {
+  visibility: hidden;
+}
+
+.toggle + label {
+  display: flex;
+  align-items: center;
+  font-size: 1.5em;
+  cursor: pointer;
+  color: #fff;
+}
+
+.toggle + label::before {
+  content: "";
+  height: 30px;
+  width: 57px;
+  border-radius: 1em;
+  background-color: var(--bcg-toggle);
+  transition: background-color 250ms ease-in-out;
+}
+
+.toggle + label .icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 26px;
+  width: 26px;
+  border-radius: 50%;
+  background-color: var(--toggle-btn);
+  position: absolute;
+  left: 15px;
+  transition: background-color 250ms ease-in-out, transform 250ms ease-in-out;
+}
+
+.toggle:checked + label .icon-container {
+  transform: translateX(100%);
+}
+
+.icon-container svg {
+  color: var(--toggle-icon);
+  width: 70%;
+  height: 70%;
+}

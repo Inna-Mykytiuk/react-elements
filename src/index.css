@@ -14,6 +14,21 @@
     #fcc539 43.78deg,
     #dc4a19 360deg
   );
+  --text-color: #707070;
+  --link-color: #2a86e5;
+  --bcg-color: #fcfcfc;
+  --bcg-toggle: #fff;
+  --toggle-btn: #183a5d;
+  --toggle-icon: #fff;
+}
+
+[data-theme="dark"] {
+  --text-color: #fff;
+  --link-color: #0dd0ba;
+  --bcg-color: #0e1219;
+  --bcg-toggle: #183a5d;
+  --toggle-btn: #fff;
+  --toggle-icon: #183a5d;
 }
 
 *,
@@ -26,9 +41,6 @@
 
 html,
 body {
-  font-family: "Red Hat Display", sans-serif;
-  font-style: normal;
-
   min-height: 100vh;
   width: 100%;
   overflow-x: hidden;
@@ -117,4 +129,17 @@ main {
     width: 1440px;
     margin: 0 auto;
   }
+}
+
+.App {
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--bcg-color);
+  color: var(--text-color);
+  font-family: "Red Hat Display", sans-serif;
+  font-style: normal;
+}
+
+.title {
+  color: var(--text-color);
 }

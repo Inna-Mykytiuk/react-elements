@@ -4,6 +4,12 @@
   background: linear-gradient(90deg, #0dd0ba 0%, #2a86e5 100%);
 }
 
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .nav-list {
   display: flex;
   gap: 30px;
