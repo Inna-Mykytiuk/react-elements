@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import { GiHamburgerMenu } from "react-icons/gi";
 import {
   FaFilter,
   FaInstagram,
@@ -21,44 +22,49 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
         <nav className='nav-wrapper'>
           <div className='nav-list'>
             <Link to={"/"} className='nav-item'>
-              <MdPhoneIphone className='phone-svg' />
+              <MdPhoneIphone />
               <p>Menu item 1</p>
             </Link>
             <Link to={"/"} className='nav-item'>
-              <FaFilter className='phone-svg' />
+              <FaFilter />
               <p>Menu item 2</p>
             </Link>
             <Link to={"/"} className='nav-item'>
-              <BsAndroid2 className='phone-svg' />
+              <BsAndroid2 />
               <p>Menu item 3</p>
             </Link>
             <Link to={"/"} className='nav-item'>
-              <FaApple className='phone-svg' />
+              <FaApple />
               <p>Menu item 4</p>
             </Link>
           </div>
-          <div className='list-wrapper'>
-            <ul className='social-list'>
-              <li className='social-item'>
-                <ImFacebook />
-              </li>
-              <li className='social-item'>
-                <FaTwitter />
-              </li>
-              <li className='social-item'>
-                <FaInstagram />
-              </li>
-              <li className='social-item'>
-                <FaYoutube />
-              </li>
-              <li className='social-item'>
-                <SiGooglenews />
-              </li>
-              <li className='social-item'>
-                <FaWifi />
-              </li>
-            </ul>
-            <ToggleBtn handleChange={toggleDarkMode} isChecked={darkMode} />
+          <div className='nav-right'>
+            <div className='list-wrapper'>
+              <ul className='social-list'>
+                <li className='social-item'>
+                  <ImFacebook />
+                </li>
+                <li className='social-item'>
+                  <FaTwitter />
+                </li>
+                <li className='social-item'>
+                  <FaInstagram />
+                </li>
+                <li className='social-item'>
+                  <FaYoutube />
+                </li>
+                <li className='social-item'>
+                  <SiGooglenews />
+                </li>
+                <li className='social-item'>
+                  <FaWifi />
+                </li>
+              </ul>
+              <ToggleBtn handleChange={toggleDarkMode} isChecked={darkMode} />
+            </div>
+            <button className='menu-btn'>
+              <GiHamburgerMenu />
+            </button>
           </div>
         </nav>
       </div>
