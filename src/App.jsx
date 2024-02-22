@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ProgressBar from "./components/ProgressBar/ProgressBar";
 import Navbar from "./components/Navbar/Navbar";
+import LogoSection from "./components/LogoSection/LogoSection";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -11,6 +12,7 @@ function App() {
         darkMode={darkMode}
         toggleDarkMode={() => setDarkMode(!darkMode)}
       />
+      <LogoSection />
       <ProgressBar />
     </div>
   );

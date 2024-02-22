@@ -1,0 +1,50 @@
+.mobile-list {
+  display: flex;
+  flex-direction: column;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+.mobile-list.opened {
+  max-height: 100%;
+  opacity: 1;
+  padding: 50px 0;
+  gap: 30px;
+  top: 0;
+}
+
+.mobile-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  gap: 5px;
+}
+
+.mobile-item p {
+  color: #fff;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.mobile-item:hover p {
+  color: #183a5d;
+}
+
+.mobile-item svg {
+  width: 20px;
+  height: 20px;
+  fill: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.mobile-item:hover svg {
+  fill: #183a5d;
+}

@@ -1,12 +1,16 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import { GiHamburgerMenu } from "react-icons/gi";
+import { useState } from "react";
+import BurgerMenu from "../ui/BurgerMenu/BurgerMenu";
+// import { GiHamburgerMenu } from "react-icons/gi";
 import {
   FaFilter,
   FaInstagram,
   FaApple,
   FaYoutube,
   FaWifi,
+  FaBars,
+  FaTimes,
 } from "react-icons/fa";
 import { MdPhoneIphone } from "react-icons/md";
 import { SiGooglenews } from "react-icons/si";
@@ -16,8 +20,10 @@ import { FaTwitter } from "react-icons/fa6";
 import "./Navbar.css";
 import ToggleBtn from "../ui/ToggleBtn/ToggleBtn";
 const Navbar = ({ darkMode, toggleDarkMode }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <div className='navbar'>
+    <div className={isOpen ? "navbar fixed" : "navbar"}>
       <div className='container'>
         <nav className='nav-wrapper'>
           <div className='nav-list'>
@@ -62,11 +68,12 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
               </ul>
               <ToggleBtn handleChange={toggleDarkMode} isChecked={darkMode} />
             </div>
-            <button className='menu-btn'>
-              <GiHamburgerMenu />
+            <button className='menu-btn' onClick={() => setIsOpen(!isOpen)}>
+              {isOpen ? <FaTimes /> : <FaBars />}
             </button>
           </div>
         </nav>
+        <BurgerMenu isOpen={isOpen} />
       </div>
     </div>
   );

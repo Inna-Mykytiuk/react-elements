@@ -20,15 +20,22 @@
   --bcg-toggle: #fff;
   --toggle-btn: #183a5d;
   --toggle-icon: #fff;
+  --icon-color: #fff;
+  --link-hover-bg: #2a86e5;
+  --link-hover-color: #0dd0ba;
 }
 
 [data-theme="dark"] {
+  --main-color: #ffffff;
   --text-color: #fff;
   --link-color: #0dd0ba;
   --bcg-color: #0e1219;
   --bcg-toggle: #183a5d;
   --toggle-btn: #fff;
   --toggle-icon: #183a5d;
+  --icon-color: #0e1219;
+  --link-hover-bg: #fff;
+  --link-hover-color: #fff;
 }
 
 *,

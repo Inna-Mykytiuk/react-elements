@@ -4,6 +4,13 @@
   background: linear-gradient(90deg, #0dd0ba 0%, #2a86e5 100%);
 }
 
+.navbar.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+
 .nav-right {
   width: 100%;
   display: flex;
@@ -37,10 +44,11 @@
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
-  line-height: 18px; /* 128.571% */
+  line-height: 18px;
   letter-spacing: 0.5px;
   transition: all 0.3s ease-in-out;
 }
+
 .nav-item:hover p {
   color: #183a5d;
 }
@@ -51,6 +59,7 @@
   fill: #fff;
   transition: all 0.3s ease-in-out;
 }
+
 .nav-item:hover svg {
   fill: #183a5d;
 }
@@ -67,6 +76,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
   gap: 5px;
 }
 
@@ -100,8 +110,8 @@
 /*Burger-Menu*/
 
 .menu-btn {
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   border: none;
   background-color: transparent;
 }
