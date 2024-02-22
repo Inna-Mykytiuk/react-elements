@@ -2,8 +2,9 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import LogoIcon from "../../assets/logo.svg?react";
 import "./LogoSection.css";
-
 import { FaBars, FaTimes } from "react-icons/fa";
+import SearchBar from "../ui/SearchBar/SearchBar";
+
 const LogoSection = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -18,32 +19,26 @@ const LogoSection = () => {
             {isOpen ? <FaTimes /> : <FaBars />}
           </button>
 
-          <ul className={isOpen ? "menu-list opened" : "menu-list"}>
-            <li>
-              <Link to={"/"}>Item 1</Link>
-            </li>
-            <li>
-              <Link to={"/"}>Item 2</Link>
-            </li>
-            <li>
-              <Link to={"/"}>Item 3</Link>
-            </li>
-            <li>
-              <Link to={"/"}>Item 4</Link>
-            </li>
-            <li>
-              <Link to={"/"}>Item 5</Link>
-            </li>
-            <li>
-              <Link to={"/"}>Item 6</Link>
-            </li>
-            <li>
-              <Link to={"/"}>Item 7</Link>
-            </li>
-            <li>
-              <Link to={"/"}>Item 8</Link>
-            </li>
-          </ul>
+          <div className='menu-wrapper'>
+            <ul className={isOpen ? "menu-list opened" : "menu-list"}>
+              <li>
+                <Link to={"/"}>Item 1</Link>
+              </li>
+              <li>
+                <Link to={"/"}>Item 2</Link>
+              </li>
+              <li>
+                <Link to={"/"}>Item 3</Link>
+              </li>
+              <li>
+                <Link to={"/"}>Item 4</Link>
+              </li>
+              <li>
+                <Link to={"/"}>Item 5</Link>
+              </li>
+            </ul>
+            <SearchBar isOpen={isOpen} />
+          </div>
         </nav>
       </div>
     </div>

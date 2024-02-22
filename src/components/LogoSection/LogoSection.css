@@ -26,32 +26,15 @@
   fill: var(--main-color);
 }
 
-/* .menu-list {
-  width: 100%;
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  gap: 15px;
-  margin-bottom: 50px;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.menu-list.opened {
-  display: flex;
-  opacity: 1;
-} */
-
 .menu-list {
   width: 100%;
+  display: none;
   max-height: 0;
   overflow: hidden;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  /* gap: 15px; */
-  margin-bottom: 50px;
+  gap: 15px;
   text-align: center;
   opacity: 0;
   transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
@@ -67,7 +50,6 @@
   color: var(--link-color);
   transition: all 0.3s ease-in-out;
   cursor: pointer;
-  margin-bottom: 15px;
 }
 
 .menu-list li:hover {
@@ -103,10 +85,12 @@
   }
   .menu-list {
     width: auto;
+    max-height: 100%;
+    opacity: 1;
+    overflow: hidden;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
     gap: 25px;
     margin-bottom: 0;
   }

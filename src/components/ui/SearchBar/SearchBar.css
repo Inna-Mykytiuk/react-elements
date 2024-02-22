@@ -1,0 +1,70 @@
+.container-input {
+  position: relative;
+  display: none;
+  margin-left: 0;
+}
+
+.menu-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+}
+
+.container-input.opened {
+  display: flex;
+}
+
+.input {
+  width: 100%;
+  padding: 10.5px 32px 10.5px 21px;
+  border-radius: 40px;
+  border: 1px solid #fff;
+  background: #eee;
+  transition: all 0.2s ease-in-out;
+  outline: none;
+  opacity: 0.8;
+}
+
+.input::placeholder {
+  color: #757575;
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.container-input svg {
+  position: absolute;
+  fill: #e1541b;
+  top: 50%;
+  right: 10px;
+  transform: translate(0, -50%);
+}
+
+.input:focus {
+  opacity: 1;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .container-input {
+    display: flex;
+    margin-left: auto;
+  }
+  .input {
+    width: 150px;
+  }
+  .input:focus {
+    opacity: 1;
+    width: 250px;
+  }
+  .menu-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    margin-left: 60px;
+  }
+}
