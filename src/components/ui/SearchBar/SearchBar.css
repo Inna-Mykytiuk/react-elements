@@ -24,6 +24,8 @@
   transition: all 0.2s ease-in-out;
   outline: none;
   opacity: 0.8;
+  margin-bottom: 30px;
+  margin-top: 30px;
 }
 
 .input::placeholder {
@@ -55,6 +57,8 @@
   }
   .input {
     width: 150px;
+    margin-bottom: 0;
+    margin-top: 0;
   }
   .input:focus {
     opacity: 1;
