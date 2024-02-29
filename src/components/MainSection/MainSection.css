@@ -1,0 +1,9 @@
+.main-section {
+  width: 100%;
+  padding: 50px 0;
+}
+
+.main-wrapper {
+  display: flex;
+  justify-content: space-between;
+}

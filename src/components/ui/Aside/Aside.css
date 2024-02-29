@@ -1,0 +1,26 @@
+.aside {
+  width: 300px;
+  height: 600px;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(
+      146deg,
+      rgba(252, 183, 56, 0.5) 6.72%,
+      rgba(239, 121, 60, 0.5) 113.18%
+    ),
+    url(../../../assets/images/aside.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  border: 3px solid #fff324;
+}
+
+@media screen and (min-width: 1280px) {
+  .aside {
+    display: flex;
+  }
+}
