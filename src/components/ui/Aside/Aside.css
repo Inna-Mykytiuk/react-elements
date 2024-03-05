@@ -8,8 +8,8 @@
 
   background: linear-gradient(
       146deg,
-      rgba(252, 183, 56, 0.5) 6.72%,
-      rgba(239, 121, 60, 0.5) 113.18%
+      rgba(252, 183, 56, 0.6) 6.72%,
+      rgba(239, 121, 60, 0.7) 113.18%
     ),
     url(../../../assets/images/aside.png);
   background-repeat: no-repeat;
@@ -17,6 +17,19 @@
   background-position: center;
   border-radius: 20px;
   border: 3px solid #fff324;
+}
+
+.aside p {
+  color: #fcfcfc;
+  text-align: center;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 120%; /* 72px */
+  letter-spacing: 0.5px;
+}
+
+.aside p:last-child {
+  font-size: 40px;
 }
 
 @media screen and (min-width: 1280px) {
